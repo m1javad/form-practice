@@ -28,34 +28,32 @@ top: 0;
 
 .form-section{
     padding-top: 60px;
-    background:rgb(0, 0, 0) ;
-    padding-right: 10vw;
-    padding-left: 5vw;
+   background-color: #000000;
     color:white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10vh;
-    align-items: flex-start;
+     align-items: flex-start;
     width: 100%;
 
 }
-.formbody{
+
+.formbody{ 
+  padding: 2vw 2vw 2vw 5vw;
     position: relative;
     display: flex;
     align-items: flex-start;
-    gap: 2rem;
-    flex-wrap: wrap;
-
-   
+    gap: 2.5rem;
+    flex-wrap: wrap; 
 }
+
 
 label{
     position: absolute;
     font-family: 'vibor',sans-serif;   
     color: #DE3076ff;
     display: block;
-    font-size: 1rem;
+    font-size: 0.8rem;
     transition: all 0.2s ease-out;
     bottom: 5px;
 
@@ -67,7 +65,7 @@ label:hover {
 }
 
 input{
-    font-size: 1rem;
+    font-size: 0.8rem;
     border-top-color: transparent;
     border-right-color: transparent;
     border-bottom-color: transparent;
@@ -93,7 +91,7 @@ input:focus{
 input:focus + label,
 input:not(:placeholder-shown) + label{
     transform: translateY(-15px);
-    font-size: .8rem;
+    font-size: .6rem;
     color: #999;
 }
 
@@ -105,15 +103,16 @@ input:not(:placeholder-shown) + label{
 .toptext{
     color:#DE3076ff;
     font-family: 'Poppins',sans-serif;
-    font-size: max(1vh,20px);
+    font-size: 1rem;
     font-weight: 400;
     margin-bottom: 10vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
 
 }
 
 .submit{
     margin-bottom: 20px;
-    margin-top: 30px;
     font-family: 'Poppins',sans-serif;
         border: 1px solid #DE3076ff;
         border-radius: 0.5vw;
@@ -122,12 +121,13 @@ input:not(:placeholder-shown) + label{
         padding: 10px 26px;
         text-align: center;
         text-decoration: none;
-        display: inline-block;
+        display: block;
         font-size: 16px;
         margin: 4px 2px;
-        margin-bottom: 25px;
         color:  #DE3076ff;;
         cursor: pointer;
+        margin-left: 5vw;
+
       
       
       
@@ -168,8 +168,107 @@ input:not(:placeholder-shown) + label{
     background-color: black  0.5;
   }
   form{
+    color:white;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 3vh;
+    align-items: flex-start;
+    width: 100%;
     
+  }
+  legend{
+    color:#DE3076ff;
+    font-family: 'Poppins',sans-serif;
+    font-size: max(3vh,20px);
+    font-weight: 400;
+    margin-left: 5vw;
+
+  }
+
+
+
+
+ul{
+  padding: 0;
+}
+#password-requirements{
+  position:relative;
+}
+
+  #password-requirements li {
+    color: red;
+    text-decoration: none;
+    list-style-type:none;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    font-size: 0.6rem ;
+  }
+  
+  #password-requirements li.green {
+    color: green;
+  }
+  
+
+
+
+  .bubble {
+    position: absolute;
+    top: -50px;
+    left: -10px;
+    background-color: #1b1b1b;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  input:focus +label+ .bubble{
+
+    top: 35px;
+    left: -10px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .hint{
+    display: none;
+    font-size: 10px;
+    color:rgb(255, 255, 255);
+    position: absolute;
+    font-weight: 900;
+    top:20px;
+    padding: 0px 2px;
+  }
+  
+  
+  .invalid{
+
+    border-bottom: 2px solid rgb(255, 0, 0) !important;
+
+  }
+
+  .valid{
+    border-bottom: 1px solid rgb(36, 126, 0) !important;
+  }
+
+  .signin{
+    font-family: 'vibor',sans-serif;   
+    color: #DE3076ff;
+    display: block;
+    font-size: 0.8rem;
+    padding-left: 5vw;
+    margin-bottom: 2vh;
+    margin-top: 1vh;
+  }
+  .signin>a{
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+
+
   }
   

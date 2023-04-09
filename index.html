@@ -7,9 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
+    <script defer src="script.js"></script>
 </head>
 <body>
+    
 
+
+
+        
+        </script>
     
 <div class="page">
     <div class="picture">
@@ -22,42 +28,75 @@
             <div><br> You know you want to</div>
         </div>
         <form action="post">
+            <legend>Lets do this.</legend>
             <div class="formbody">
             
                     <div class="row">
-                        <input type="text" name="FirstName" id="FirstName" placeholder=" " required>
+                        <input type="text" name="FirstName" id="FirstName" placeholder=" " required pattern="[A-Za-z]+" >
                         <label for="FirstName">First name</label>
+                        <div class="hint">*only letters are allowed</div>
+                        
                     </div>
                     <div class="row">
-                        <input type="text" name="LastName" id="LastName" placeholder=" " required>
+                        <input type="text" name="LastName" id="LastName" placeholder=" " required pattern="[A-Za-z]+">
                         <label for="LastName">Last name</label>
+                        <div class="hint">*only letters are allowed</div>
+
                     </div>
                     <div class="row">
                         <input type="email" name="Email" id="Email" placeholder=" " required>
                         <label for="Email">Email</label>
+                        <div class="hint">please enter valid email like: example@email.com </div>
+
                     </div>
                     <div class="row">
-                        <input type="tel" name="PhoneNumber" id="PhoneNumber" placeholder=" " required>
+                        <input type="tel" name="PhoneNumber" id="PhoneNumber" placeholder=" " required pattern="[0-9]{11}" maxlength="11">
                         <label for="PhoneNumber">Phone Number</label>
-                    </div>
+                        <div class="hint" >please enter a valid phone number</div>
+
+                    </div> 
                     <div class="row">
-                        <input type="password" name="Password" id="Password" placeholder=" " required>
+                        
+                        <input type="password"  name="Password" id="Password" placeholder=" " required="Your password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, and one number." 
+                         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" onkeyup="checkPassword()" >
+                       
                         <label for="Password">Password</label>
+                        <span class="bubble" id="Bubble">
+                            <ul id="password-requirements">
+                                <li id="length">At least 8 characters long</li>
+                                <li id="uppercase">At least one uppercase letter</li>
+                                <li id="lowercase">At least one lowercase letter</li>
+                                <li id="number">At least one number</li>
+                              </ul>
+                        </span>
+
                     </div>
                     <div class="row">
-                        <input type="password" name="ConfirmPassword" id="ConfirmPassword" placeholder=" " required>
+                        <input type="password" name="ConfirmPassword" id="ConfirmPassword" placeholder=" " required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
                         <label for="ConfirmPassword">Confirm Password</label>
+                        <div class="hint" >*passwords does not match</div>
+
                     </div>
+                   
             
             </div>
             
+              
+            
             <button class="submit" type="submit" >Create account</button>
-        </form>
+        </form>           
+         <div class="signin">Already have an account? <a href="#">Sign in</a></div>
+
+
+        
 
 
     </div>
 </div>
 
     
+
+
+
 </body>
 </html>
