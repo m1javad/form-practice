@@ -220,13 +220,14 @@ ul{
     color: #fff;
     padding: 10px;
     border-radius: 5px;
+    width: max-content;
 
 
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease-in-out;
   }
-  
+
   input:focus +label+ .bubble{
 
     top: 35px;
@@ -272,3 +273,13 @@ ul{
 
   }
   
+  @media screen and (max-width: 600px) {
+
+    input:focus +label+ .bubble{
+
+      top: 0px;
+      left: 120px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
