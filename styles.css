@@ -259,7 +259,7 @@ ul{
 
   .signin{
     font-family: 'vibor',sans-serif;   
-    color: #DE3076ff;
+    color: rgb(222, 48, 118);
     display: block;
     font-size: 0.8rem;
     padding-left: 5vw;
@@ -272,7 +272,30 @@ ul{
 
 
   }
-  
+  .picture>div>img{
+    width: 60px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px;
+  }
+ .logo{
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-weight: 900;
+font-size: 3vw;
+color: rgb(222, 48, 118);
+-webkit-text-stroke: 0.1px white;
+
+
+  }
+
+  .logo-on-picture{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color:rgba(222, 48, 118, 0.5);
+    margin-top: 25vh;
+  }
   @media screen and (max-width: 600px) {
 
     input:focus +label+ .bubble{
@@ -282,4 +305,11 @@ ul{
       opacity: 1;
       visibility: visible;
     }
+    .logo{
+     
+      font-size: 6vw;
+      
+      
+      
+        }
   }
